@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIY-zN-lCj">
+                                <rect key="frame" x="152" y="81" width="70" height="30"/>
+                                <state key="normal" title="Start Date"/>
+                                <connections>
+                                    <segue destination="Dsp-nn-lQs" kind="presentation" id="Wkd-rT-i2v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMt-tP-4u0">
+                                <rect key="frame" x="156" y="135" width="63" height="30"/>
+                                <state key="normal" title="End Date"/>
+                                <connections>
+                                    <segue destination="w8D-ni-DWD" kind="presentation" id="mmS-aI-Gb2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lab 8 by CWhite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulM-P3-jjj">
+                                <rect key="frame" x="124" y="36" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Between" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZA-qG-1IW">
+                                <rect key="frame" x="133" y="189" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GIY-zN-lCj" firstAttribute="top" secondItem="ulM-P3-jjj" secondAttribute="bottom" constant="24" id="0Rd-e6-CrL"/>
+                            <constraint firstItem="ulM-P3-jjj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M4A-Te-v15"/>
+                            <constraint firstItem="GIY-zN-lCj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ocp-Lz-K16"/>
+                            <constraint firstItem="kZA-qG-1IW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q01-fZ-UGo"/>
+                            <constraint firstItem="ZMt-tP-4u0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UD0-pl-uia"/>
+                            <constraint firstItem="kZA-qG-1IW" firstAttribute="top" secondItem="ZMt-tP-4u0" secondAttribute="bottom" constant="24" id="eZi-ab-9yG"/>
+                            <constraint firstItem="ulM-P3-jjj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="gPo-YI-F2B"/>
+                            <constraint firstItem="ZMt-tP-4u0" firstAttribute="top" secondItem="GIY-zN-lCj" secondAttribute="bottom" constant="24" id="tN7-PJ-98a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnEndDate" destination="ZMt-tP-4u0" id="mJT-dt-VXZ"/>
+                        <outlet property="btnStartDate" destination="GIY-zN-lCj" id="bSG-G5-H4l"/>
+                        <outlet property="lblDaysBetween" destination="kZA-qG-1IW" id="Nch-pq-fyt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="42"/>
+        </scene>
+        <!--startDate-->
+        <scene sceneID="CcH-Lf-qEe">
+            <objects>
+                <viewController id="Dsp-nn-lQs" userLabel="startDate" customClass="StartDateViewController" customModule="Lab8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kqa-86-Dvh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cVq-FC-BMa">
+                                <rect key="frame" x="28" y="44" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="562201011.55480695">
+                                    <!--2018-10-25 22:56:51 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="startDateChanged:" destination="Dsp-nn-lQs" eventType="valueChanged" id="K5I-GV-eHV"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s72-ky-URB">
+                                <rect key="frame" x="172" y="284" width="30" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <segue destination="Mk3-Ai-XqO" kind="unwind" unwindAction="myUnwindActionWithSender:" id="EZQ-hK-aju"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cVq-FC-BMa" firstAttribute="centerX" secondItem="Kqa-86-Dvh" secondAttribute="centerX" id="C1U-CE-Dgy"/>
+                            <constraint firstItem="s72-ky-URB" firstAttribute="centerX" secondItem="Kqa-86-Dvh" secondAttribute="centerX" id="dTz-qS-Bsb"/>
+                            <constraint firstItem="s72-ky-URB" firstAttribute="top" secondItem="cVq-FC-BMa" secondAttribute="bottom" constant="24" id="qn3-PI-rmi"/>
+                            <constraint firstItem="cVq-FC-BMa" firstAttribute="top" secondItem="SkD-ka-JeM" secondAttribute="top" constant="24" id="tZC-ko-LCV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SkD-ka-JeM"/>
+                    </view>
+                    <connections>
+                        <outlet property="startDatePicker" destination="cVq-FC-BMa" id="sNU-5M-cKh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GjV-hv-LWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Mk3-Ai-XqO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="-389"/>
+        </scene>
+        <!--endDate-->
+        <scene sceneID="vTC-lT-wMI">
+            <objects>
+                <viewController id="w8D-ni-DWD" userLabel="endDate" customClass="EndDateViewController" customModule="Lab8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="34Z-EM-fdx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0JQ-7K-rcJ">
+                                <rect key="frame" x="28" y="44" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="562201015.62606704">
+                                    <!--2018-10-25 22:56:55 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="endDateChanged:" destination="w8D-ni-DWD" eventType="valueChanged" id="hgT-jJ-0yW"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WN2-xN-DgS">
+                                <rect key="frame" x="172" y="284" width="30" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <segue destination="MXG-2N-jIA" kind="unwind" unwindAction="myUnwindActionWithSender:" id="2w7-k3-tmM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0JQ-7K-rcJ" firstAttribute="centerX" secondItem="34Z-EM-fdx" secondAttribute="centerX" id="Atu-u5-pxk"/>
+                            <constraint firstItem="WN2-xN-DgS" firstAttribute="centerX" secondItem="34Z-EM-fdx" secondAttribute="centerX" id="N46-WB-uJE"/>
+                            <constraint firstItem="WN2-xN-DgS" firstAttribute="top" secondItem="0JQ-7K-rcJ" secondAttribute="bottom" constant="24" id="b5s-BY-i1D"/>
+                            <constraint firstItem="0JQ-7K-rcJ" firstAttribute="top" secondItem="DMy-ry-Xj3" secondAttribute="top" constant="24" id="cuz-fG-LEP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DMy-ry-Xj3"/>
+                    </view>
+                    <connections>
+                        <outlet property="endDatePicker" destination="0JQ-7K-rcJ" id="1hL-rf-tpg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QQ2-m6-jFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MXG-2N-jIA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="277"/>
+        </scene>
+    </scenes>
+</document>
