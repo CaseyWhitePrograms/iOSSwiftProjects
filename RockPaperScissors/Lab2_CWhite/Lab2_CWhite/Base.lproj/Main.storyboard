@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab2_CWhite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="CrA-by-pLA">
+                                <rect key="frame" x="12.5" y="36" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Itr-Y5-Dgt"/>
+                                    <constraint firstAttribute="height" constant="150" id="b9O-mC-C32"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="tks-fr-JgJ">
+                                <rect key="frame" x="212.5" y="36" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Moq-gK-QLY"/>
+                                    <constraint firstAttribute="height" constant="150" id="xCy-k3-n7a"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOd-fu-4aH">
+                                <rect key="frame" x="16" y="202" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cn5-rB-bwo">
+                                <rect key="frame" x="167.5" y="621" width="40" height="30"/>
+                                <state key="normal" title="Paper"/>
+                                <connections>
+                                    <action selector="btnPaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ANA-IJ-bQl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MH-cg-8Rm">
+                                <rect key="frame" x="70" y="621" width="35" height="30"/>
+                                <state key="normal" title="Rock"/>
+                                <connections>
+                                    <action selector="btnRock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ydK-sI-hiS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w53-su-TLc">
+                                <rect key="frame" x="258.5" y="621" width="58" height="30"/>
+                                <state key="normal" title="Scissors"/>
+                                <connections>
+                                    <action selector="btnScissors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E4O-AH-K7F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CrA-by-pLA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="5UQ-6G-1Yj"/>
+                            <constraint firstItem="cOd-fu-4aH" firstAttribute="top" secondItem="CrA-by-pLA" secondAttribute="bottom" constant="16" id="BAX-ht-muU"/>
+                            <constraint firstItem="cn5-rB-bwo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ejf-0T-xDC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w53-su-TLc" secondAttribute="bottom" constant="16" id="MJQ-4n-DRe"/>
+                            <constraint firstItem="cOd-fu-4aH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Rae-hf-nmg"/>
+                            <constraint firstItem="tks-fr-JgJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="UcK-sE-7VM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cn5-rB-bwo" secondAttribute="bottom" constant="16" id="UpB-0s-CCf"/>
+                            <constraint firstItem="1MH-cg-8Rm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-100" id="WM1-M3-0fo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1MH-cg-8Rm" secondAttribute="bottom" constant="16" id="cuq-Ck-xw9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cOd-fu-4aH" secondAttribute="trailing" constant="16" id="gDg-DX-S2Q"/>
+                            <constraint firstItem="CrA-by-pLA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-100" id="q9a-Bk-0RE"/>
+                            <constraint firstItem="tks-fr-JgJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="vQ0-Ww-wql"/>
+                            <constraint firstItem="w53-su-TLc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="zUQ-Yr-bRD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ivComputer" destination="tks-fr-JgJ" id="Qn7-4y-akW"/>
+                        <outlet property="ivPlayer" destination="CrA-by-pLA" id="DdT-Us-ecm"/>
+                        <outlet property="lblScore" destination="cOd-fu-4aH" id="aGA-Mf-DU4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rock" width="214" height="236"/>
+    </resources>
+</document>
